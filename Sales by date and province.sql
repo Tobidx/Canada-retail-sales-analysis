@@ -1,0 +1,11 @@
+-- TOTAL SALES BY DATE AND PROVINCE
+SELECT 
+    REF_DATE AS DATE,
+    GEO AS Province,
+    SUM(VALUE) AS TOTAL_SALES
+FROM 
+    Retail_sales
+GROUP BY 
+    REF_DATE, province
+ORDER BY 
+    REF_DATE, province;

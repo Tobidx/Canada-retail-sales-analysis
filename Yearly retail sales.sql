@@ -1,0 +1,12 @@
+
+
+-- YEARLY RETAIL SALES
+SELECT 
+    SUBSTRING(REF_DATE, 1, 4) AS Year,
+    SUM(VALUE) AS Total_sales
+FROM 
+    Retail_sales
+GROUP BY 
+    SUBSTRING(REF_DATE, 1, 4)
+ORDER BY 
+    Year;
